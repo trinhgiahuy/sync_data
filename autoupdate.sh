@@ -8,7 +8,7 @@ if [[ -n $(git status -s) ]]; then
 	echo "Files change: Correct year. Pushing changes..."
 	git add -A && git commit -m "$1: Update files" && git push origin main
     else
-	echp "Files change: Wrong year. Discard changes..."
+	echo "Files change: Wrong year. Discard changes..."
 	find . -type f -name "2025*" -delete
     fi
     
